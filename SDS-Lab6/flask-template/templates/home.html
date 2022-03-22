@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>State Capital Quiz</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+    </head>
+    <body>
+        <h1>State Capital Quiz</h1>
+        <h4>Type the capital for each State</h4>        
+      <form action="/results" method="post">
+          {% for state in states %}
+            <input type="text" name="{{state}}"
+              placeholder="{{state}}"/>
+          {% endfor %}
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
